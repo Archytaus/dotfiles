@@ -18,4 +18,4 @@ export EDITOR='atom -a'
 
 if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
 
-[[ -s "${HOME}/.local_bash_profile" ]] && source "${HOME}/.local_bash_profile"
+[[ -s "${HOME}/.local_profile.bash" ]] && source "${HOME}/.local_profile.bash"

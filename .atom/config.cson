@@ -1,0 +1,65 @@
+"*":
+  "autocomplete-elixir":
+    elixirPath: "/usr/local/bin"
+    erlangHome: "/usr/local/bin"
+  build:
+    saveOnBuild: true
+  "build-cargo":
+    backtraceType: "Compact"
+    extCommands:
+      cargoCheck: true
+      cargoClippy: true
+  core:
+    audioBeep: false
+    disabledPackages: [
+      "jshint"
+      "linter-scss-lint"
+      "linter-rust"
+      "linter-rubocop"
+    ]
+    projectHome: "/Users/ryanscott/Projects"
+    telemetryConsent: "limited"
+    themes: [
+      "one-dark-ui"
+      "base16-tomorrow-dark-theme"
+    ]
+  editor:
+    confirmCheckoutHeadRevision: false
+    fontSize: 12
+    invisibles: {}
+  "exception-reporting":
+    userId: "21fa45a7-a89e-01ea-0a63-53355c6265bd"
+  linter:
+    errorPanelHeight: 73
+    showInfoMessages: true
+  "linter-rubocop":
+    command: "/Users/ryanscott/.rvm/gems/ruby-2.3.1@zensapp/bin/rubocop"
+    disableWhenNoConfigFile: true
+  "linter-rust":
+    cargoPath: "/Users/ryanscott/.cargo/bin/cargo"
+    rustcPath: "/Users/ryanscott/.cargo/bin/rustc"
+  metrics:
+    userId: "7ae8f55218da62a98dcb1c69fcd812cfc8b0939d"
+  racer:
+    cargoHome: "/Users/ryanscott/.cargo"
+    racerBinPath: "/Users/ryanscott/.cargo/bin/racer"
+    rustSrcPath: "/Users/ryanscott/rustc-nightly/src/"
+  "release-notes":
+    viewedVersion: "0.95.0"
+  "split-diff":
+    diffWords: true
+    ignoreWhitespace: true
+    leftEditorColor: "red"
+    rightEditorColor: "green"
+    syncHorizontalScroll: true
+  tokamak:
+    cargoBinPath: "/Users/ryanscott/.cargo/bin/cargo"
+    multirustBinPath: "/Users/ryanscott/.cargo/bin/multirust"
+    rustcBinPath: "/Users/ryanscott/.cargo/bin/rustc"
+  "tree-view":
+    hideVcsIgnoredFiles: true
+  welcome:
+    showOnStartup: false
+".rust.source":
+  editor:
+    tabLength: 2

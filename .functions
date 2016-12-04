@@ -1,0 +1,49 @@
+#!/usr/bin/env bash
+
+# Example usage:
+#  guid
+function guid {
+  ruby -e "require 'securerandom'; puts SecureRandom.uuid"
+}
+
+# Example usage:
+#  gif input.mov output.gif
+function gif {
+  screengif --input "$1" --output "$2"
+  imgcat "$2"
+}
+
+# Example usage:
+#  serve .
+function serve {
+  SERVED_DIR="$1"
+  PORT=8888
+  open http://localhost:$PORT
+  ruby -run -e httpd $SERVED_DIR -p $PORT
+}
+
+function demand_attention {
+  printf "\x1b]1337;RequestAttention=true\x7"
+}
+
+function notification {
+  printf  "\x1b]9;$1\x7"
+}
+
+# Example usage:
+#  important <long running command>
+function important {
+  ($*; retval=$?; demand_attention; notification "'$1' has finished running"; return $retval)
+}
+
+# Example usage:
+#  watch src/ Cargo.toml | cargo check
+function watch {
+  fswatch -0 -o $1 | xargs -0 -n1 -I {} echo "Changed: {}"
+}
+
+# Example usage:
+#  title "💾 Git"
+function title {
+    echo -ne "\033]0;"$*"\007"
+}
